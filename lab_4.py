@@ -1,4 +1,6 @@
 import math
+import random
+import numpy as np
 
 """
 #Zadanie 1
@@ -31,10 +33,32 @@ def zad3():
         for i in range(1, h+1):
             print(i * z)
             h=h-1
-"""
+            
+#Zadanie 4
+def zad4():
+    n = int(input("Podaj wysokosc macierzy: "))
+    m = int(input("Podaj szerokosc macierzy: "))
+    mac = []
+    for i in range(m):
+        a = []
+        for j in range(n):
+            a.append(random.randint(0, 100))
+        mac.append(a)
+    for i in range(m):
+        for j in range(n):
+            print(mac[i][j], end=" ")
+            """
+def zad4():
+    n = int(input("Podaj wysokosc macierzy: "))
+    m = int(input("Podaj szerokosc macierzy: "))
+    mac = np.random.randint(10, size=(n, m))
+    for i in range(n):
+
+    print(mac)
 
 def main():
 #    zad1()
 #    zad2()
 #    zad3()
+    zad4()
 main()
